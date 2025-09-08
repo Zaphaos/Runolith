@@ -3,14 +3,13 @@
 	"pattern": [
 		"RAR",
 		"OEO",
-		"DQD"
+		"OQO"
 	],
 	"key": {
-		"R": { "item": "runolith:ruby" }, 
+		"R": { "tag": "runolith:gems" }, 
 		"A": { "item": "minecraft:amethyst_shard" },
 		"O": { "item": "minecraft:obsidian" },
 		"E": { "item": "minecraft:iron_block" },
-		"D": { "item": "minecraft:diamond" },
 		"Q": { "item": "minecraft:glowstone_dust" }
 	},
 	"result": { 

@@ -107,7 +107,41 @@ public class GrowthChamberBlockEntity extends BlockEntity implements MenuProvide
 	}
 	
 	public void tick(Level level, BlockPos blockPos, BlockState blockState) {
+		if (hasGem() && hasFuel()) {
+			increaseCraftingProgress();
+			setChanged(level, blockPos, blockState);
+			if(hasCraftingFinished()) {
+				craftItem();
+				resetProgress();
+			}
+		} else {
+			resetProgress();
+		}
+	}
+	
+	private void craftItem() {
 		
+	}
+
+	private boolean hasCraftingFinished() {
+		return this.progress >= maxProgress;
+	}
+
+	private void resetProgress() {
+		progress = 0;
+		maxProgress = 720;
+	}
+
+	private void increaseCraftingProgress() {
+		progress++;
+	}
+
+	private boolean hasFuel() {
+		return false;
+	}
+
+	private boolean hasGem() {
+		return false;
 	}
 	
 	@Override
