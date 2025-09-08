@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:blasting",
+	"ingredient": {
+	        "item": "runolith:gem_node_ruby"
+	},
+    "result": {
+        "id": "runolith:ruby"
+    },
+    "experience": 0.5,
+    "cookingtime": 100
+}

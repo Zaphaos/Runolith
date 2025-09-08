@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:blasting",
+	"ingredient": {
+	        "item": "runolith:ruby_ore"
+	},
+    "result": {
+        "id": "runolith:ruby"
+    },
+    "experience": 1.0,
+    "cookingtime": 100
+}

@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"runolith:ruby_block",
+		"runolith:impure_ruby_block",
+		"runolith:ruby_ore",
+		"runolith:deepslate_ruby_ore"
+	]
+}

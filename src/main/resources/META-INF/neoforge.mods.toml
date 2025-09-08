@@ -1,0 +1,12 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "runolith"
+version = "1.0.0"
+displayName = "Runolith"
+authors = "Zaphaos"
+description = '''
+Adds Gem based Items to Minecraft.
+'''

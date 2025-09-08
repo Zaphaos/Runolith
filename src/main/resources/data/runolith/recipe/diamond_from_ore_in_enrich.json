@@ -1,0 +1,14 @@
+{
+	"type": "runolith:enrichment_chamber",
+	"ingredient": {
+		"item": "minecraft:diamond_ore"
+	},
+	"primary_result": {
+		"id": "minecraft:diamond",
+		"count": 2
+	},
+	"secondary_result": {
+		"id": "runolith:gem_node_diamond"
+	},
+	"secondary_chance": 0.05
+}

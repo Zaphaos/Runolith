@@ -1,0 +1,23 @@
+{
+"creativetab.runolith.runolith_tab":		"Runolith",
+  "item.runolith.ruby":						"Ruby",
+  "item.runolith.impure_ruby":				"Impure Ruby",
+  "item.runolith.gem_node_ruby":			"Ruby Gem Node",
+  "item.runolith.gem_node_diamond":			"Diamond Gem Node",
+  "item.runolith.gem_node_emerald":			"Emerald Gem Node",
+  "item.runolith.emerald_sword": 			"Emerald Sword",
+  "item.runolith.emerald_pickaxe": 			"Emerald Pickaxe",
+  "item.runolith.emerald_axe": 				"Emerald Axe",
+  "item.runolith.emerald_shovel": 			"Emerald Shovel",
+  "item.runolith.emerald_hoe":				"Emerald Hoe",
+  "item.runolith.emerald_helmet": 			"Emerald Helmet",
+  "item.runolith.emerald_chestplate": 		"Emerald Chestplate",
+  "item.runolith.emerald_leggings": 		"Emerald Leggings",
+  "item.runolith.emerald_boots": 			"Emerald Boots",
+  "block.runolith.enrichment_chamber":		"Enrichment Chamber",
+  "block.runolith.growth_chamber":			"Growth Chamber",
+  "block.runolith.ruby_block":				"Block of Ruby",
+  "block.runolith.impure_ruby_block":		"Block of Impure Ruby",
+  "block.runolith.ruby_ore":				"Ruby Ore",
+  "block.runolith.deepslate_ruby_ore":		"Deepslate Ruby Ore"
+}

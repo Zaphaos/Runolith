@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "runolith:impure_ruby"
+    },
+    "result": {
+        "id": "runolith:ruby"
+    },
+    "experience": 1.0,
+    "cookingtime": 200
+}

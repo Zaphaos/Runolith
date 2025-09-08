@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "runolith:ruby_block"
+        }
+    ],
+    "result": {
+        "id": "runolith:ruby",
+        "count": 1
+    }
+}
