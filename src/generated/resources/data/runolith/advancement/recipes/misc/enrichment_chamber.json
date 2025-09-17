@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gem_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#runolith:gems"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "runolith:enrichment_chamber"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gem_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "runolith:enrichment_chamber"
+    ]
+  }
+}

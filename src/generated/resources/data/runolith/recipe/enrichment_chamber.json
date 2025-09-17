@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "R": {
+      "tag": "runolith:gems"
+    }
+  },
+  "pattern": [
+    "RAR",
+    "OIO",
+    "OGO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "runolith:enrichment_chamber"
+  }
+}

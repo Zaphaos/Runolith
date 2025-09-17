@@ -38,14 +38,13 @@ public class CustTier {
     public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS =
             DeferredRegister.create(Registries.ARMOR_MATERIAL, Runolith.MODID);
 	public static final Holder<ArmorMaterial> EMERALD_ARMOR =
-		ARMOR_MATERIALS.register("emerald", () -> new ArmorMaterial(
-		    Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+		ARMOR_MATERIALS.register("emerald", () -> new ArmorMaterial( Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
 	            map.put(ArmorItem.Type.BOOTS, 2);
 	            map.put(ArmorItem.Type.LEGGINGS, 5);
 	            map.put(ArmorItem.Type.CHESTPLATE, 5);
 	            map.put(ArmorItem.Type.HELMET, 2);
 	            map.put(ArmorItem.Type.BODY, 4);
-	        }),									// armour value
+	        }),									// Armour value
 		    25,                                 // enchantability
 		    SoundEvents.ARMOR_EQUIP_DIAMOND,    // equip sound wrapped as Holder<SoundEvent> (note below)
 		    () -> Ingredient.of(Items.EMERALD), // repair ingredient

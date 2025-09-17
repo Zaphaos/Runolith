@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "runolith:item/gem_node",
+    "layer1": "runolith:item/gem_node_emerald"
+  }
+}

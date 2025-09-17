@@ -1,0 +1,12 @@
+// 1.21.1	2025-09-17T04:14:41.198146045	Tags for minecraft:item mod id vanilla
+ee4c09381e3dab93ad4530b44fc5d2df3af6a6f2 data/minecraft/tags/item/axes.json
+5910d9db059c0fd7194affa62e86b620cabd149f data/minecraft/tags/item/chest_armor.json
+8f708696e9ce28acde02316d67fa9efc9fd0dd78 data/minecraft/tags/item/foot_armor.json
+8e1117ee0fcc7637d7acd690db1c3ab567627b65 data/minecraft/tags/item/head_armor.json
+0ddc0f3fe3a2e0197f77466ab9105988a165e576 data/minecraft/tags/item/hoes.json
+1a160eedf21095198ab40fe400f0a300bbd88e41 data/minecraft/tags/item/leg_armor.json
+542fbfea6ecee0f7685ca48c6772dfdcfb84b07a data/minecraft/tags/item/pickaxes.json
+e80a06c4a7bacc30505bfee78c8c477fb4aed032 data/minecraft/tags/item/shovels.json
+329ec598e0b8c513d5b1f5351727f8c3e2027f03 data/minecraft/tags/item/swords.json
+7a0fdac3375b00327c142a677bf402a8c8853eda data/minecraft/tags/item/trimmable_armor.json
+fde9bb6f5f84bef582a026ea00f07e0eef961cc3 data/runolith/tags/item/gems.json
