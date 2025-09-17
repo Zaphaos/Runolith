@@ -15,7 +15,6 @@ import com.zaphaos.runolith.datagen.recipe.EnrichingRecipeBuilder;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.BlastingRecipe;
@@ -153,7 +152,18 @@ public class ModRecipeProvider extends RecipeProvider {
 		oreSmelting(recipeOutput, EMERALD_SMELTABLES, RecipeCategory.MISC, Items.EMERALD, 0.25f, 200, "emerald");
 		oreBlasting(recipeOutput, EMERALD_SMELTABLES, RecipeCategory.MISC, Items.EMERALD, 0.25f, 100, "emerald");
 		
+		enriching(recipeOutput, ModBlocks.RUBY_ORE, 0.1f, RecipeCategory.MISC, ModItems.RUBY, 2, ModItems.GEM_NODE_RUBY, 1, "ruby");
+		enriching(recipeOutput, ModBlocks.DEEPSLATE_RUBY_ORE, 0.15f, RecipeCategory.MISC, ModItems.RUBY, 2, ModItems.GEM_NODE_RUBY, 1, "ruby");
+		enriching(recipeOutput, ModItems.IMPURE_RUBY, 0.75f, RecipeCategory.MISC, ModItems.RUBY, 1, ModItems.RUBY, 1, "ruby");
+		enriching(recipeOutput, ModItems.GEM_NODE_RUBY, 0.5f, RecipeCategory.MISC, ModItems.RUBY, 1, ModItems.RUBY, 1, "ruby");
 		
+		enriching(recipeOutput, Items.DIAMOND_ORE, 0.05f, RecipeCategory.MISC, Items.DIAMOND, 2, ModItems.GEM_NODE_DIAMOND, 1, "diamond");
+		enriching(recipeOutput, Items.DEEPSLATE_DIAMOND_ORE, 0.075f, RecipeCategory.MISC, Items.DIAMOND, 2, ModItems.GEM_NODE_DIAMOND, 1, "diamond");
+		enriching(recipeOutput, ModItems.GEM_NODE_DIAMOND, 0.33f, RecipeCategory.MISC, Items.DIAMOND, 1, Items.DIAMOND, 1, "diamond");
+		
+		enriching(recipeOutput, Items.EMERALD_ORE, 0.1f, RecipeCategory.MISC, Items.EMERALD, 2, ModItems.GEM_NODE_EMERALD, 1, "emerald");
+		enriching(recipeOutput, Items.DEEPSLATE_EMERALD_ORE, 0.15f, RecipeCategory.MISC, Items.EMERALD, 2, ModItems.GEM_NODE_EMERALD, 1, "emerald");
+		enriching(recipeOutput, ModItems.GEM_NODE_EMERALD, 0.5f, RecipeCategory.MISC, Items.EMERALD, 1, Items.EMERALD, 1, "emerald");
 	}
 	protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
 		float pExperience, int pCookingTIme, String pGroup) {
@@ -179,6 +189,6 @@ public class ModRecipeProvider extends RecipeProvider {
             						RecipeCategory category, ItemLike primary, int pCount, ItemLike secondary, int sCount, String group) {
 		EnrichingRecipeBuilder.enriching(ingredient, category, primary, pCount, secondary, sCount, chance, group)
 		.unlockedBy("has_" + ingredient.asItem().toString(), net.minecraft.advancements.critereon.InventoryChangeTrigger.TriggerInstance.hasItems(ingredient))
-		.save(recipeOutput, Runolith.MODID + ":" + getItemName(primary) + "from_enriching_" + ingredient);
+		.save(recipeOutput, Runolith.MODID + ":" + getItemName(primary) + "_from_enriching_" + getItemName(ingredient));
 	}
 }

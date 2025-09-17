@@ -1,0 +1,15 @@
+{
+  "type": "runolith:enrichment_chamber",
+  "ingredient": {
+    "item": "minecraft:emerald_ore"
+  },
+  "primary_result": {
+    "count": 2,
+    "id": "minecraft:emerald"
+  },
+  "secondary_chance": 0.1,
+  "secondary_result": {
+    "count": 1,
+    "id": "runolith:gem_node_emerald"
+  }
+}

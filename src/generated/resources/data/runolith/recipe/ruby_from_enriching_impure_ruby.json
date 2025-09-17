@@ -1,0 +1,15 @@
+{
+  "type": "runolith:enrichment_chamber",
+  "ingredient": {
+    "item": "runolith:impure_ruby"
+  },
+  "primary_result": {
+    "count": 1,
+    "id": "runolith:ruby"
+  },
+  "secondary_chance": 0.75,
+  "secondary_result": {
+    "count": 1,
+    "id": "runolith:ruby"
+  }
+}

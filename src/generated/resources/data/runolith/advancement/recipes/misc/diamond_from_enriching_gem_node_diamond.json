@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "has_runolith:gem_node_diamond": {
+      "conditions": {
+        "items": [
+          {
+            "items": "runolith:gem_node_diamond"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "runolith:diamond_from_enriching_gem_node_diamond"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_runolith:gem_node_diamond"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "runolith:diamond_from_enriching_gem_node_diamond"
+    ]
+  }
+}
