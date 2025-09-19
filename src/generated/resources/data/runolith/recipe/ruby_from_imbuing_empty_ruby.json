@@ -1,0 +1,10 @@
+{
+  "type": "runolith:imbuement_chamber",
+  "ingredient": {
+    "item": "runolith:empty_ruby"
+  },
+  "result": {
+    "count": 1,
+    "id": "runolith:ruby"
+  }
+}

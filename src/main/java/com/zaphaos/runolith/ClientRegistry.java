@@ -2,6 +2,8 @@ package com.zaphaos.runolith;
 
 import com.zaphaos.runolith.screen.ModMenuTypes;
 import com.zaphaos.runolith.screen.custom.EnrichmentChamberScreen;
+import com.zaphaos.runolith.screen.custom.ImbuementChamberScreen;
+
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -13,5 +15,6 @@ public class ClientRegistry {
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.ENRICHMENT_CHAMBER_MENU.get(), EnrichmentChamberScreen::new);
+        event.register(ModMenuTypes.IMBUEMENT_CHAMBER_MENU.get(), ImbuementChamberScreen::new);
     }
 }

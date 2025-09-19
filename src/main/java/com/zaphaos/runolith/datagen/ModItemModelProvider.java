@@ -51,6 +51,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		
 		basicItem(ModItems.IMPURE_RUBY.get());
 		basicItem(ModItems.RUBY.get());
+		basicItem(ModItems.EMPTY_RUBY.get());
 		
 		handheldItem(ModWeapons.EMERALD_SWORD.get());
 		handheldItem(ModTools.EMERALD_PICKAXE.get());

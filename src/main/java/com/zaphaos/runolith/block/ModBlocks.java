@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import com.zaphaos.runolith.Runolith;
 import com.zaphaos.runolith.block.custom.EnrichmentChamberBlock;
 import com.zaphaos.runolith.block.custom.GrowthChamberBlock;
+import com.zaphaos.runolith.block.custom.ImbuementChamberBlock;
 import com.zaphaos.runolith.item.ModItems;
 
 import net.minecraft.util.valueproviders.UniformInt;
@@ -56,6 +57,12 @@ public class ModBlocks {
 					.sound(SoundType.METAL)));
 	public static final DeferredBlock<Block> GROWTH_CHAMBER = registerBlock("growth_chamber",
 			() -> new GrowthChamberBlock(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_LIGHT_GRAY)
+					.requiresCorrectToolForDrops()
+					.strength(2.0f, 3.0f)
+					.sound(SoundType.METAL)));
+	public static final DeferredBlock<Block> IMBUEMENT_CHAMBER = registerBlock("imbuement_chamber",
+			() -> new ImbuementChamberBlock(BlockBehaviour.Properties.of()
 					.mapColor(MapColor.COLOR_LIGHT_GRAY)
 					.requiresCorrectToolForDrops()
 					.strength(2.0f, 3.0f)

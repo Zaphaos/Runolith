@@ -24,6 +24,8 @@ public class CreativeTab {
 			.displayItems((itemDisplayParameters, output) -> {
 				output.accept(ModBlocks.ENRICHMENT_CHAMBER.get());
 				output.accept(ModBlocks.GROWTH_CHAMBER.get());
+				output.accept(ModBlocks.IMBUEMENT_CHAMBER.get());
+				output.accept(ModItems.GEM_NODE_EMERALD.get());
 				output.accept(ModWeapons.EMERALD_SWORD.get());
 				output.accept(ModTools.EMERALD_PICKAXE.get());
 				output.accept(ModTools.EMERALD_AXE.get());
@@ -37,9 +39,9 @@ public class CreativeTab {
 				output.accept(ModBlocks.IMPURE_RUBY_BLOCK.get());
 				output.accept(ModBlocks.RUBY_ORE.get());
 				output.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
-				output.accept(ModItems.GEM_NODE_EMERALD.get());
 				output.accept(ModItems.RUBY.get());
 				output.accept(ModItems.IMPURE_RUBY.get());
+				output.accept(ModItems.EMPTY_RUBY.get());
 				output.accept(ModItems.GEM_NODE_RUBY.get());
 				output.accept(ModItems.GEM_NODE_DIAMOND.get());
 			}).build());

@@ -1,7 +1,8 @@
-// 1.21.1	2025-09-09T21:14:35.960590887	Loot Tables
+// 1.21.1	2025-09-19T00:16:24.811912812	Loot Tables
 31af19deaa45e073b54c83a24bd7022f4c6edfd9 data/runolith/loot_table/blocks/deepslate_ruby_ore.json
 5250f73ed679132dbf10bdefd93b9d242af1d4c5 data/runolith/loot_table/blocks/enrichment_chamber.json
 8b667cdd48937c1f56899bda2089e447b9aa86b9 data/runolith/loot_table/blocks/growth_chamber.json
+a6e7751de86fa8f0d4fb301a29ef97a7f3f37602 data/runolith/loot_table/blocks/imbuement_chamber.json
 af7ef8dd78618917ddb63c35c138e3bcfb7775ad data/runolith/loot_table/blocks/impure_ruby_block.json
 27648b52a03ff672bab10bab811dd8c644d9840e data/runolith/loot_table/blocks/ruby_block.json
 b13b6c6e0348a685d8017be443d713a9f880ad68 data/runolith/loot_table/blocks/ruby_ore.json

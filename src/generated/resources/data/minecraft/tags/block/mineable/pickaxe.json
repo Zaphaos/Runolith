@@ -5,6 +5,7 @@
     "runolith:ruby_ore",
     "runolith:deepslate_ruby_ore",
     "runolith:enrichment_chamber",
-    "runolith:growth_chamber"
+    "runolith:growth_chamber",
+    "runolith:imbuement_chamber"
   ]
 }

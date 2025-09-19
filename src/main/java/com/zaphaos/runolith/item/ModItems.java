@@ -20,6 +20,8 @@ public class ModItems {
     		() -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> GEM_NODE_DIAMOND = ITEMS.register("gem_node_diamond", 
     		() -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> EMPTY_RUBY = ITEMS.register("empty_ruby", 
+    		() -> new Item(new Item.Properties()));
     
     public static void register(IEventBus modEventBus) 
     {

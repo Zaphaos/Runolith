@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "runolith:imbuement_chamber"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "runolith:blocks/imbuement_chamber"
+}

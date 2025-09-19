@@ -24,6 +24,15 @@ public class ModRecipes {
 					return "enrichment_chamber";
 				}
 			});
+	public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<ImbuementChamberRecipe>> IMBUEMENT_CHAMBER_SERIALIZER =
+			SERIALIZERS.register("imbuement_chamber", ImbuementChamberRecipe.Serializer::new);
+	public static final DeferredHolder<RecipeType<?>, RecipeType<ImbuementChamberRecipe>> IMBUEMENT_CHAMBER_TYPE =
+			TYPES.register("imbuement_chamber", () -> new RecipeType<ImbuementChamberRecipe>() {
+				@Override
+				public String toString() {
+					return "imbuement_chamber";
+				}
+			});
 	
 	public static void register(IEventBus eventBus) {
 		SERIALIZERS.register(eventBus);

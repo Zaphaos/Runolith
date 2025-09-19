@@ -2,6 +2,7 @@ package com.zaphaos.runolith.screen;
 
 import com.zaphaos.runolith.Runolith;
 import com.zaphaos.runolith.screen.custom.EnrichmentChamberMenu;
+import com.zaphaos.runolith.screen.custom.ImbuementChamberMenu;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -18,6 +19,9 @@ public class ModMenuTypes {
 	
 	public static final DeferredHolder<MenuType<?>, MenuType<EnrichmentChamberMenu>> ENRICHMENT_CHAMBER_MENU =
 			registerMenuType("enrichment_chamber_menu", EnrichmentChamberMenu::new);
+	
+	public static final DeferredHolder<MenuType<?>, MenuType<ImbuementChamberMenu>> IMBUEMENT_CHAMBER_MENU =
+			registerMenuType("imbuement_chamber_menu", ImbuementChamberMenu::new);
 	
 	private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
 		return MENUS.register(name, () -> IMenuTypeExtension.create(factory));

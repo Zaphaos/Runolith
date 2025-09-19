@@ -5,8 +5,10 @@ import java.util.List;
 import com.zaphaos.runolith.Runolith;
 import com.zaphaos.runolith.block.ModBlocks;
 import com.zaphaos.runolith.recipe.EnrichmentChamberRecipe;
+import com.zaphaos.runolith.recipe.ImbuementChamberRecipe;
 import com.zaphaos.runolith.recipe.ModRecipes;
 import com.zaphaos.runolith.screen.custom.EnrichmentChamberScreen;
+import com.zaphaos.runolith.screen.custom.ImbuementChamberScreen;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -32,6 +34,8 @@ public class JEIRunolithPlugin implements IModPlugin {
 	public void registerCategories(IRecipeCategoryRegistration registration) {
 		registration.addRecipeCategories(new EnrichmentChamberRecipeCategory(
 				registration.getJeiHelpers().getGuiHelper()));
+		registration.addRecipeCategories(new ImbuementChamberRecipeCategory(
+				registration.getJeiHelpers().getGuiHelper()));
 	}
 	
 	@Override
@@ -41,17 +45,24 @@ public class JEIRunolithPlugin implements IModPlugin {
 		List<EnrichmentChamberRecipe> enrichmentChamberRecipe = recipeManager
 				.getAllRecipesFor(ModRecipes.ENRICHMENT_CHAMBER_TYPE.get()).stream().map(RecipeHolder::value).toList();
 		registration.addRecipes(EnrichmentChamberRecipeCategory.ENRICHMENT_CHAMBER_RECIPE_RECIPE_TYPE, enrichmentChamberRecipe);
+		List<ImbuementChamberRecipe> imbuementChamberRecipe = recipeManager
+				.getAllRecipesFor(ModRecipes.IMBUEMENT_CHAMBER_TYPE.get()).stream().map(RecipeHolder::value).toList();
+		registration.addRecipes(ImbuementChamberRecipeCategory.IMBUEMENT_CHAMBER_RECIPE_RECIPE_TYPE, imbuementChamberRecipe);
 	}
 	
 	@Override
 	public void registerGuiHandlers(IGuiHandlerRegistration registration) {
 		registration.addRecipeClickArea(EnrichmentChamberScreen.class, 74, 30, 22, 20,
 				EnrichmentChamberRecipeCategory.ENRICHMENT_CHAMBER_RECIPE_RECIPE_TYPE);
+		registration.addRecipeClickArea(ImbuementChamberScreen.class, 30, 30, 20, 20,
+				ImbuementChamberRecipeCategory.IMBUEMENT_CHAMBER_RECIPE_RECIPE_TYPE);
 	}
 	
 	@Override
 	public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
 		registration.addRecipeCatalyst(new ItemStack(ModBlocks.ENRICHMENT_CHAMBER.asItem()), 
 				EnrichmentChamberRecipeCategory.ENRICHMENT_CHAMBER_RECIPE_RECIPE_TYPE);
+		registration.addRecipeCatalyst(new ItemStack(ModBlocks.IMBUEMENT_CHAMBER.asItem()),
+				ImbuementChamberRecipeCategory.IMBUEMENT_CHAMBER_RECIPE_RECIPE_TYPE);
 	}
 }

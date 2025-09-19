@@ -11,6 +11,7 @@ import com.zaphaos.runolith.equipment.mod_weapons.ModWeapons;
 import com.zaphaos.runolith.item.ModItems;
 import com.zaphaos.runolith.util.ModTags;
 import com.zaphaos.runolith.datagen.recipe.EnrichingRecipeBuilder;
+import com.zaphaos.runolith.datagen.recipe.ImbuementRecipeBuilder;
 
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
@@ -164,6 +165,8 @@ public class ModRecipeProvider extends RecipeProvider {
 		enriching(recipeOutput, Items.EMERALD_ORE, 0.1f, RecipeCategory.MISC, Items.EMERALD, 2, ModItems.GEM_NODE_EMERALD, 1, "emerald");
 		enriching(recipeOutput, Items.DEEPSLATE_EMERALD_ORE, 0.15f, RecipeCategory.MISC, Items.EMERALD, 2, ModItems.GEM_NODE_EMERALD, 1, "emerald");
 		enriching(recipeOutput, ModItems.GEM_NODE_EMERALD, 0.5f, RecipeCategory.MISC, Items.EMERALD, 1, Items.EMERALD, 1, "emerald");
+		
+		imbuing(recipeOutput, ModItems.EMPTY_RUBY, RecipeCategory.MISC, ModItems.RUBY, 1, "ruby");
 	}
 	protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
 		float pExperience, int pCookingTIme, String pGroup) {
@@ -190,5 +193,11 @@ public class ModRecipeProvider extends RecipeProvider {
 		EnrichingRecipeBuilder.enriching(ingredient, category, primary, pCount, secondary, sCount, chance, group)
 		.unlockedBy("has_" + ingredient.asItem().toString(), net.minecraft.advancements.critereon.InventoryChangeTrigger.TriggerInstance.hasItems(ingredient))
 		.save(recipeOutput, Runolith.MODID + ":" + getItemName(primary) + "_from_enriching_" + getItemName(ingredient));
+	}
+	
+	protected static void imbuing(RecipeOutput recipeOutput, ItemLike ingredient, RecipeCategory category, ItemLike primary, int pCount, String group) {
+		ImbuementRecipeBuilder.imbuing(ingredient, category, primary, pCount, group)
+		.unlockedBy("has_" + ingredient.asItem().toString(), net.minecraft.advancements.critereon.InventoryChangeTrigger.TriggerInstance.hasItems(ingredient))
+		.save(recipeOutput, Runolith.MODID + ":" + getItemName(primary) + "_from_imbuing_" + getItemName(ingredient));
 	}
 }

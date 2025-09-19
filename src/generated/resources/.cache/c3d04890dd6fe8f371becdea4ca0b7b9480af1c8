@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-17T01:23:47.727539179	Item Models: runolith
+// 1.21.1	2025-09-19T03:17:54.47969178	Item Models: runolith
 d920e30e17669e162562464b73556a88d7e7eb79 assets/runolith/models/item/emerald_axe.json
 850417c0d4d28ca0e412ddc0eec1cc18a301191f assets/runolith/models/item/emerald_boots.json
 7146cb9a0ea6f1ad8494cb515078c9029e2c4770 assets/runolith/models/item/emerald_boots_amethyst_trim.json
@@ -48,6 +48,7 @@ a54ddecb84819651e920fba83547ad91dfbbf868 assets/runolith/models/item/emerald_leg
 07e8c38581d8ca1807e5fa00d815173cb287bc51 assets/runolith/models/item/emerald_pickaxe.json
 e37b162206326ae1946920b662626ca2d7379740 assets/runolith/models/item/emerald_shovel.json
 40a1e48bfdd8d18fe72b347117251e10bbbfc4e7 assets/runolith/models/item/emerald_sword.json
+378cee194fcf17b2a3c3a767453afadcdd5e329b assets/runolith/models/item/empty_ruby.json
 b24f7c098e2f43c252ca46d5fe92780234ef063e assets/runolith/models/item/gem_node_diamond.json
 523e29674718ec6847b1cdcf5f9db20d1e31450a assets/runolith/models/item/gem_node_emerald.json
 ef8e1c73a719ffbb3c74d74477f8585893cf2b34 assets/runolith/models/item/gem_node_ruby.json

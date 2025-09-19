@@ -18,13 +18,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	protected void registerStatesAndModels() {
 		blockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE);
 		blockWithItem(ModBlocks.ENRICHMENT_CHAMBER);
-		//blockWithItem(ModBlocks.GROWTH_CHAMBER);
 		blockWithItem(ModBlocks.IMPURE_RUBY_BLOCK);
 		blockWithItem(ModBlocks.RUBY_BLOCK);
 		blockWithItem(ModBlocks.RUBY_ORE);
+		
+		//blockWithItemCubeBottomTop(ModBlocks.GROWTH_CHAMBER, "growth_chamber_side", "growth_chamber_bottom", "growth_chamber_top");
+		//blockWithItemCubeBottomTop(ModBlocks.IMBUEMENT_CHAMBER, "imbuement_chamber_side", "imbuement_chamber_bottom", "imbuement_chamber_top");
 	}
 	
 	private void blockWithItem(DeferredBlock<?> deferredBlock) {
 		simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
 	}
+
+	private void blockWithItemCubeBottomTop(DeferredBlock<?> block, String side, String bottom, String top) {
+		simpleBlockWithItem(block.get(), models().cubeBottomTop(
+            block.getId().getPath(),   // model name
+            modLoc("block/" + side),   // side texture
+            modLoc("block/" + bottom), // bottom texture
+            modLoc("block/" + top)     // top texture
+			)
+		);
+	}
+
 }
