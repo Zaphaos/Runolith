@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = 
-			DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, Runolith.MODID);
+			DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, Runolith.MOD_ID);
 	
 	public static final Supplier<BlockEntityType<EnrichmentChamberBlockEntity>> ENRICHMENT_CHAMBER_BE =
 			BLOCK_ENTITIES.register("enrichment_chamber_be", () -> BlockEntityType.Builder.of(
@@ -23,6 +23,9 @@ public class ModBlockEntities {
 	public static final Supplier<BlockEntityType<ImbuementChamberBlockEntity>> IMBUEMENT_CHAMBER_BE =
 			BLOCK_ENTITIES.register("imbuement_chamber_be", () -> BlockEntityType.Builder.of(
 					ImbuementChamberBlockEntity::new, ModBlocks.IMBUEMENT_CHAMBER.get()).build(null));
+	public static final Supplier<BlockEntityType<DynamicItemPedestalBlockEntity>> DYNAMIC_ITEM_PEDESTAL_BE =
+			BLOCK_ENTITIES.register("dynamic_item_pedestal_be", () -> BlockEntityType.Builder.of(
+					DynamicItemPedestalBlockEntity::new, ModBlocks.DYNAMIC_ITEM_PEDESTAL.get()).build(null));
 	
 	public static void register(IEventBus eventBus)  {
 		BLOCK_ENTITIES.register(eventBus);

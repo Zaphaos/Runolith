@@ -1,4 +1,5 @@
-// 1.21.1	2025-09-17T04:14:41.198146045	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-09-24T20:05:14.746222797	Tags for minecraft:item mod id vanilla
+d970a78ef389626fab41418339d45a567aa8d60f data/c/tags/item/gems.json
 ee4c09381e3dab93ad4530b44fc5d2df3af6a6f2 data/minecraft/tags/item/axes.json
 5910d9db059c0fd7194affa62e86b620cabd149f data/minecraft/tags/item/chest_armor.json
 8f708696e9ce28acde02316d67fa9efc9fd0dd78 data/minecraft/tags/item/foot_armor.json

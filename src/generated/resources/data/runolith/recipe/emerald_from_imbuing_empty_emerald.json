@@ -1,11 +1,11 @@
 {
   "type": "runolith:imbuement_chamber",
   "ingredient": {
-    "item": "runolith:empty_ruby"
+    "item": "runolith:empty_emerald"
   },
   "result": {
     "count": 1,
-    "id": "runolith:ruby"
+    "id": "minecraft:emerald"
   },
   "tier": 1
 }

@@ -11,7 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModWeapons {
-	public static final DeferredRegister.Items WEAPONS = DeferredRegister.createItems(Runolith.MODID);
+	public static final DeferredRegister.Items WEAPONS = DeferredRegister.createItems(Runolith.MOD_ID);
 	public static final Supplier<Item> EMERALD_SWORD = WEAPONS.register("emerald_sword", () -> new SwordItem(
             CustTier.EMERALD_TIER,
             new Item.Properties().attributes(

@@ -30,7 +30,7 @@ public class EnrichingRecipeBuilder implements RecipeBuilder {
     private int secondaryCount;
     private final float secondaryChance;
     private final RecipeCategory category;
-    private final String group;
+	private final String group;
     
     private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
     

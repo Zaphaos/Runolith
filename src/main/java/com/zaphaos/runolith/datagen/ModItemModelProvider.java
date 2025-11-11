@@ -40,7 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 		
 	
 	public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-		super(output, Runolith.MODID, existingFileHelper);
+		super(output, Runolith.MOD_ID, existingFileHelper);
 	}
 
 	@Override
@@ -49,9 +49,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 		gemNodeItem(ModItems.GEM_NODE_EMERALD.get());
 		gemNodeItem(ModItems.GEM_NODE_RUBY.get());
 		
+		basicItem(ModItems.EMPTY_EMERALD.get());
 		basicItem(ModItems.IMPURE_RUBY.get());
 		basicItem(ModItems.RUBY.get());
 		basicItem(ModItems.EMPTY_RUBY.get());
+		basicItem(ModItems.EMPTY_DIAMOND.get());
 		
 		handheldItem(ModWeapons.EMERALD_SWORD.get());
 		handheldItem(ModTools.EMERALD_PICKAXE.get());
@@ -76,7 +78,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("layer1", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-        final String MOD_ID = Runolith.MODID; // Change this to your mod id
+        final String MOD_ID = Runolith.MOD_ID;
 
         if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
@@ -94,20 +96,13 @@ public class ModItemModelProvider extends ItemModelProvider {
                 String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
                 String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
                 ResourceLocation armorItemResLoc = ResourceLocation.parse(armorItemPath);
-                ResourceLocation trimResLoc = ResourceLocation.parse(trimPath); // minecraft namespace
+                ResourceLocation trimResLoc = ResourceLocation.parse(trimPath);
                 ResourceLocation trimNameResLoc = ResourceLocation.parse(currentTrimName);
-
-                // This is used for making the ExistingFileHelper acknowledge that this texture exist, so this will
-                // avoid an IllegalArgumentException
                 existingFileHelper.trackGenerated(trimResLoc, PackType.CLIENT_RESOURCES, ".png", "textures");
-
-                // Trimmed armorItem files
                 getBuilder(currentTrimName)
                         .parent(new ModelFile.UncheckedModelFile("item/generated"))
                         .texture("layer0", armorItemResLoc.getNamespace() + ":item/" + armorItemResLoc.getPath())
                         .texture("layer1", trimResLoc);
-
-                // Non-trimmed armorItem file (normal variant)
                 this.withExistingParent(itemDeferredItem.getId().getPath(),
                                 mcLoc("item/generated"))
                         .override()

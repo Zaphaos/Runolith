@@ -12,15 +12,15 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
 	public static class Blocks {
 		private static TagKey<Block> createTag(String name) {
-			return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Runolith.MODID, name));
+			return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, name));
 		}
 	}
 	
 	public static class Items {
-		public static final TagKey<Item> GEMS = createTag("gems");
+		public static final TagKey<Item> GROWABLE_GEMS = createTag("gems");
 		
 		private static TagKey<Item> createTag(String name) {
-			return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Runolith.MODID, name));
+			return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, name));
 		}
 	}
 }

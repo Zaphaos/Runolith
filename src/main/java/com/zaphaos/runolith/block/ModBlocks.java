@@ -3,6 +3,7 @@ package com.zaphaos.runolith.block;
 import java.util.function.Supplier;
 
 import com.zaphaos.runolith.Runolith;
+import com.zaphaos.runolith.block.custom.DynamicItemPedestalBlock;
 import com.zaphaos.runolith.block.custom.EnrichmentChamberBlock;
 import com.zaphaos.runolith.block.custom.GrowthChamberBlock;
 import com.zaphaos.runolith.block.custom.ImbuementChamberBlock;
@@ -18,13 +19,14 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModBlocks {
 	public static final DeferredRegister.Blocks BLOCKS =
-			DeferredRegister.createBlocks(Runolith.MODID);
-	
+			DeferredRegister.createBlocks(Runolith.MOD_ID);
+
 	public static final DeferredBlock<Block> RUBY_BLOCK = registerBlock("ruby_block",
 			() -> new Block(BlockBehaviour.Properties.of()
 					.mapColor(MapColor.COLOR_RED)
@@ -67,6 +69,11 @@ public class ModBlocks {
 					.requiresCorrectToolForDrops()
 					.strength(2.0f, 3.0f)
 					.sound(SoundType.METAL)));
+	
+	public static final DeferredBlock<Block> DYNAMIC_ITEM_PEDESTAL = registerBlock("dynamic_item_pedestal",
+			() -> new DynamicItemPedestalBlock(BlockBehaviour.Properties.of()
+					.requiresCorrectToolForDrops()
+					.strength(1.0f, 2.0f)));
 	
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
 		DeferredBlock<T> toReturn = BLOCKS.register(name, block);

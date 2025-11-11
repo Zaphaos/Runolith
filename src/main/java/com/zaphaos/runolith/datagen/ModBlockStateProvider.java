@@ -11,7 +11,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 public class ModBlockStateProvider extends BlockStateProvider {
 
 	public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-		super(output, Runolith.MODID, exFileHelper);
+		super(output, Runolith.MOD_ID, exFileHelper);
 	}
 
 	@Override

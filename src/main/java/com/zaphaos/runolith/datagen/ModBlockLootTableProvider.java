@@ -34,6 +34,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 		dropSelf(ModBlocks.ENRICHMENT_CHAMBER.get());
 		dropSelf(ModBlocks.GROWTH_CHAMBER.get());
 		dropSelf(ModBlocks.IMBUEMENT_CHAMBER.get());
+		dropSelf(ModBlocks.DYNAMIC_ITEM_PEDESTAL.get());
 		
 		add(ModBlocks.RUBY_ORE.get(),
 				block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.IMPURE_RUBY.get()));

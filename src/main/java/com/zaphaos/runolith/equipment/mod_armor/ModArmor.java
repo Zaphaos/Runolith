@@ -10,7 +10,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModArmor {
-	public static final DeferredRegister.Items ARMOR = DeferredRegister.createItems(Runolith.MODID);
+	public static final DeferredRegister.Items ARMOR = DeferredRegister.createItems(Runolith.MOD_ID);
 
     public static final DeferredItem<ArmorItem> EMERALD_HELMET =
     		ARMOR.register("emerald_helmet", () -> new ArmorItem(

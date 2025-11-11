@@ -23,8 +23,8 @@ import com.zaphaos.runolith.block.ModBlocks;
 import com.zaphaos.runolith.recipe.EnrichmentChamberRecipe;
 
 public class EnrichmentChamberRecipeCategory implements IRecipeCategory<EnrichmentChamberRecipe> {
-	public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(Runolith.MODID, "enrichment_chamber");
-	public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Runolith.MODID, 
+	public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, "enrichment_chamber");
+	public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, 
 			"textures/gui/enrichment_chamber/enrichment_chamber_gui.png");
 	
 	public static final RecipeType<EnrichmentChamberRecipe> ENRICHMENT_CHAMBER_RECIPE_RECIPE_TYPE = 
@@ -68,7 +68,7 @@ public class EnrichmentChamberRecipeCategory implements IRecipeCategory<Enrichme
 	    if (!recipe.secondaryOutput().isEmpty()) {
 	        builder.addSlot(RecipeIngredientRole.OUTPUT, 87, 18) // coords above main output
 	               .addItemStack(recipe.secondaryOutput())
-	               .addTooltipCallback((slotView, tooltip) -> {
+	               .addRichTooltipCallback((slotView, tooltip) -> {
 	                   tooltip.add(Component.literal(
 	                       String.format("%.0f%% chance", recipe.secondaryChance() * 100)
 	                   ));

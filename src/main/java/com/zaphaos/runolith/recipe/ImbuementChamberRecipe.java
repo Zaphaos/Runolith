@@ -1,5 +1,6 @@
 package com.zaphaos.runolith.recipe;
 
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
@@ -15,7 +16,8 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
 public record ImbuementChamberRecipe(
-		Ingredient ingredient, 
+		Ingredient ingredient,
+		int tier,
 		ItemStack output
 		) implements Recipe<ImbuementChamberRecipeInput> {
 
@@ -64,23 +66,28 @@ public record ImbuementChamberRecipe(
 				RecordCodecBuilder.mapCodec(inst -> inst.group(
 					Ingredient.CODEC_NONEMPTY.fieldOf("ingredient")
                         .forGetter(ImbuementChamberRecipe::ingredient),
+                    Codec.INT.fieldOf("tier")
+                    	.forGetter(ImbuementChamberRecipe::tier),
                     ItemStack.CODEC.fieldOf("result")
                         .forGetter(ImbuementChamberRecipe::output)
-                ).apply(inst, (ingredient, primary) ->
+                ).apply(inst, (ingredient, tier, primary) ->
                 new ImbuementChamberRecipe(
                 		ingredient, 
+                		tier,
                 		primary)));
 		
 		public static final StreamCodec<RegistryFriendlyByteBuf, ImbuementChamberRecipe> STREAM_CODEC =
 	            StreamCodec.of(
 	                (buf, recipe) -> {
 	                    Ingredient.CONTENTS_STREAM_CODEC.encode(buf, recipe.ingredient());
+	                    buf.writeInt(recipe.tier());
 	                    ItemStack.STREAM_CODEC.encode(buf, recipe.output());
 	                },
 	                buf -> {
 	                    Ingredient ing = Ingredient.CONTENTS_STREAM_CODEC.decode(buf);
+	                    int tier = buf.readInt();
 	                    ItemStack primary = ItemStack.STREAM_CODEC.decode(buf);
-	                    return new ImbuementChamberRecipe(ing, primary);
+	                    return new ImbuementChamberRecipe(ing, tier, primary);
 	                }
 	            );
 		

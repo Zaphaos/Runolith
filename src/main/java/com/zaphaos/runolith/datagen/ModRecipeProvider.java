@@ -23,6 +23,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.common.Tags;
 
 public class ModRecipeProvider extends RecipeProvider {
 
@@ -33,15 +34,15 @@ public class ModRecipeProvider extends RecipeProvider {
 	@Override
 	protected void buildRecipes(RecipeOutput recipeOutput) {
 		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENRICHMENT_CHAMBER.get())
-			.pattern("RAR")
+			.pattern("RPR")
 			.pattern("OIO")
 			.pattern("OGO")
-			.define('R', ModTags.Items.GEMS)
-			.define('A', Items.AMETHYST_SHARD)
+			.define('R', Tags.Items.GEMS)
+			.define('P', Items.PISTON)
 			.define('O', Items.OBSIDIAN)
 			.define('I', Items.IRON_BLOCK)
 			.define('G', Items.GLOWSTONE_DUST)
-			.unlockedBy("has_gem_item", has(ModTags.Items.GEMS)).save(recipeOutput);
+			.unlockedBy("has_gem_item", has(Tags.Items.GEMS)).save(recipeOutput);
 		
 		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
 			.pattern("RRR")
@@ -166,7 +167,9 @@ public class ModRecipeProvider extends RecipeProvider {
 		enriching(recipeOutput, Items.DEEPSLATE_EMERALD_ORE, 0.15f, RecipeCategory.MISC, Items.EMERALD, 2, ModItems.GEM_NODE_EMERALD, 1, "emerald");
 		enriching(recipeOutput, ModItems.GEM_NODE_EMERALD, 0.5f, RecipeCategory.MISC, Items.EMERALD, 1, Items.EMERALD, 1, "emerald");
 		
-		imbuing(recipeOutput, ModItems.EMPTY_RUBY, RecipeCategory.MISC, ModItems.RUBY, 1, "ruby");
+		imbuing(recipeOutput, 1, ModItems.EMPTY_EMERALD, RecipeCategory.MISC, Items.EMERALD, 1, "emerald");
+		imbuing(recipeOutput, 1, ModItems.EMPTY_RUBY, RecipeCategory.MISC, ModItems.RUBY, 1, "ruby");
+		imbuing(recipeOutput, 1, ModItems.EMPTY_DIAMOND, RecipeCategory.MISC, Items.DIAMOND, 1, "diamond");
 	}
 	protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
 		float pExperience, int pCookingTIme, String pGroup) {
@@ -184,7 +187,7 @@ public class ModRecipeProvider extends RecipeProvider {
                                  List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
 		for(ItemLike itemlike : pIngredients) {
 			SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-				.save(recipeOutput, Runolith.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+				.save(recipeOutput, Runolith.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
 		}
 	}
 	
@@ -192,12 +195,12 @@ public class ModRecipeProvider extends RecipeProvider {
             						RecipeCategory category, ItemLike primary, int pCount, ItemLike secondary, int sCount, String group) {
 		EnrichingRecipeBuilder.enriching(ingredient, category, primary, pCount, secondary, sCount, chance, group)
 		.unlockedBy("has_" + ingredient.asItem().toString(), net.minecraft.advancements.critereon.InventoryChangeTrigger.TriggerInstance.hasItems(ingredient))
-		.save(recipeOutput, Runolith.MODID + ":" + getItemName(primary) + "_from_enriching_" + getItemName(ingredient));
+		.save(recipeOutput, Runolith.MOD_ID + ":" + getItemName(primary) + "_from_enriching_" + getItemName(ingredient));
 	}
 	
-	protected static void imbuing(RecipeOutput recipeOutput, ItemLike ingredient, RecipeCategory category, ItemLike primary, int pCount, String group) {
-		ImbuementRecipeBuilder.imbuing(ingredient, category, primary, pCount, group)
+	protected static void imbuing(RecipeOutput recipeOutput, int tier, ItemLike ingredient, RecipeCategory category, ItemLike primary, int pCount, String group) {
+		ImbuementRecipeBuilder.imbuing(ingredient, tier, category, primary, pCount, group)
 		.unlockedBy("has_" + ingredient.asItem().toString(), net.minecraft.advancements.critereon.InventoryChangeTrigger.TriggerInstance.hasItems(ingredient))
-		.save(recipeOutput, Runolith.MODID + ":" + getItemName(primary) + "_from_imbuing_" + getItemName(ingredient));
+		.save(recipeOutput, Runolith.MOD_ID + ":" + getItemName(primary) + "_from_imbuing_" + getItemName(ingredient));
 	}
 }

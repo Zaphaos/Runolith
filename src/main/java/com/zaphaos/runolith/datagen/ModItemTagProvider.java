@@ -16,6 +16,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ModItemTagProvider extends ItemTagsProvider {
@@ -27,7 +28,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
-		tag(ModTags.Items.GEMS)
+		tag(Tags.Items.GEMS)
+			.add(ModItems.RUBY.get());
+		
+		tag(ModTags.Items.GROWABLE_GEMS)
 			.add(ModItems.RUBY.get())
 			.add(Items.EMERALD)
 			.add(Items.DIAMOND);

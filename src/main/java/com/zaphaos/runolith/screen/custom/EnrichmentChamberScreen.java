@@ -13,9 +13,9 @@ import net.minecraft.world.entity.player.Inventory;
 public class EnrichmentChamberScreen extends AbstractContainerScreen<EnrichmentChamberMenu> {
 	
 	private static final ResourceLocation GUI_TEXTURE =
-			ResourceLocation.fromNamespaceAndPath(Runolith.MODID, "textures/gui/enrichment_chamber/enrichment_chamber_gui.png");
+			ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, "textures/gui/enrichment_chamber/enrichment_chamber_gui.png");
 	private static final ResourceLocation ARROW_TEXTURE =
-			ResourceLocation.fromNamespaceAndPath(Runolith.MODID, "textures/gui/arrow_progress.png");
+			ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, "textures/gui/arrow_progress.png");
 	
 	public EnrichmentChamberScreen(EnrichmentChamberMenu menu, Inventory playerInventory, Component title) {
 		super(menu, playerInventory, title);

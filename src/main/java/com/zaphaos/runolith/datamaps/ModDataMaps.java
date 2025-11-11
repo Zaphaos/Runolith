@@ -11,13 +11,13 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.datamaps.DataMapType;
 import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 
-@EventBusSubscriber(modid = Runolith.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Runolith.MOD_ID)
 public class ModDataMaps {
 	public static final DataMapType<Item, ImbuementFuel> IMBUEMENT_FUEL = DataMapType.builder(
 			id("imbuement_fuel"), Registries.ITEM, ImbuementFuel.CODEC).synced(ImbuementFuel.CODEC, false).build();
 	
 	private static ResourceLocation id(final String name) {
-        return ResourceLocation.fromNamespaceAndPath(Runolith.MODID, name);
+        return ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, name);
     }
 	
 	@SubscribeEvent

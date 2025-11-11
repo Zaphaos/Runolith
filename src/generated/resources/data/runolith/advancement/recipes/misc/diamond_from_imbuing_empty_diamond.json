@@ -1,11 +1,10 @@
 {
-  "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gem_item": {
+    "has_runolith:empty_diamond": {
       "conditions": {
         "items": [
           {
-            "items": "#c:gems"
+            "items": "runolith:empty_diamond"
           }
         ]
       },
@@ -13,7 +12,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "runolith:enrichment_chamber"
+        "recipe": "runolith:diamond_from_imbuing_empty_diamond"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +20,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gem_item"
+      "has_runolith:empty_diamond"
     ]
   ],
   "rewards": {
     "recipes": [
-      "runolith:enrichment_chamber"
+      "runolith:diamond_from_imbuing_empty_diamond"
     ]
   }
 }

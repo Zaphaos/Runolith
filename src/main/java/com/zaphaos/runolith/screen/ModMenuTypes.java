@@ -15,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModMenuTypes {
 	public static final DeferredRegister<MenuType<?>> MENUS =
-			DeferredRegister.create(Registries.MENU, Runolith.MODID);
+			DeferredRegister.create(Registries.MENU, Runolith.MOD_ID);
 	
 	public static final DeferredHolder<MenuType<?>, MenuType<EnrichmentChamberMenu>> ENRICHMENT_CHAMBER_MENU =
 			registerMenuType("enrichment_chamber_menu", EnrichmentChamberMenu::new);

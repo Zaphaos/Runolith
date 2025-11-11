@@ -1,11 +1,11 @@
 {
   "type": "runolith:imbuement_chamber",
   "ingredient": {
-    "item": "runolith:empty_ruby"
+    "item": "runolith:empty_diamond"
   },
   "result": {
     "count": 1,
-    "id": "runolith:ruby"
+    "id": "minecraft:diamond"
   },
   "tier": 1
 }

@@ -17,7 +17,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
-@EventBusSubscriber(modid = Runolith.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Runolith.MOD_ID)
 public class DataGenerators {
 	@SubscribeEvent
 	public static void gatherData(GatherDataEvent event) {

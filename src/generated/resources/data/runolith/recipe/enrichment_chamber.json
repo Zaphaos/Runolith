@@ -2,9 +2,6 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "minecraft:amethyst_shard"
-    },
     "G": {
       "item": "minecraft:glowstone_dust"
     },
@@ -14,12 +11,15 @@
     "O": {
       "item": "minecraft:obsidian"
     },
+    "P": {
+      "item": "minecraft:piston"
+    },
     "R": {
-      "tag": "runolith:gems"
+      "tag": "c:gems"
     }
   },
   "pattern": [
-    "RAR",
+    "RPR",
     "OIO",
     "OGO"
   ],

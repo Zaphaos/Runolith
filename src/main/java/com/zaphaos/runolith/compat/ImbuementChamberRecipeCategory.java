@@ -4,28 +4,23 @@ import org.jetbrains.annotations.Nullable;
 
 import com.zaphaos.runolith.Runolith;
 import com.zaphaos.runolith.block.ModBlocks;
-import com.zaphaos.runolith.recipe.EnrichmentChamberRecipe;
 import com.zaphaos.runolith.recipe.ImbuementChamberRecipe;
 
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
-import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
 public class ImbuementChamberRecipeCategory implements IRecipeCategory<ImbuementChamberRecipe> {
-	public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(Runolith.MODID, "imbuement_chamber");
-	public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Runolith.MODID, 
+	public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, "imbuement_chamber");
+	public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, 
 			"textures/gui/imbuement_chamber/imbuement_chamber_gui.png");
 	
 	public static final RecipeType<ImbuementChamberRecipe> IMBUEMENT_CHAMBER_RECIPE_RECIPE_TYPE = 

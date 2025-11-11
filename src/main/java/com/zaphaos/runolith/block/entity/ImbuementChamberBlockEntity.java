@@ -5,8 +5,6 @@ import java.util.Optional;
 import org.jetbrains.annotations.Nullable;
 
 import com.zaphaos.runolith.datamaps.ModDataMaps;
-import com.zaphaos.runolith.recipe.EnrichmentChamberRecipe;
-import com.zaphaos.runolith.recipe.EnrichmentChamberRecipeInput;
 import com.zaphaos.runolith.recipe.ImbuementChamberRecipe;
 import com.zaphaos.runolith.recipe.ImbuementChamberRecipeInput;
 import com.zaphaos.runolith.recipe.ModRecipes;
@@ -168,9 +166,13 @@ public class ImbuementChamberBlockEntity extends BlockEntity implements MenuProv
 	}
 
 	private boolean hasFuel() {
+		Optional<RecipeHolder<ImbuementChamberRecipe>> recipe = getCurrentRecipe();
+	    if (recipe.isEmpty()) return false;
+
+	    ImbuementChamberRecipe r = recipe.get().value();
 		var holder =  BuiltInRegistries.ITEM.wrapAsHolder(itemHandler.getStackInSlot(FUEL_SLOT).getItem());
 		var fuel = holder.getData(ModDataMaps.IMBUEMENT_FUEL);
-		return fuel != null;
+		return fuel != null && fuel.tier() >= r.tier();
 	}
 	
 	private void increaseCraftingProgress() {

@@ -7,10 +7,10 @@ import com.zaphaos.runolith.events.ModEvents;
 
 import net.neoforged.bus.api.IEventBus;
 
-@Mod(Runolith.MODID)
+@Mod(Runolith.MOD_ID)
 public class Runolith 
 {
-    public static final String MODID = "runolith";
+    public static final String MOD_ID = "runolith";
 
     public Runolith(IEventBus modEventBus) 
     {

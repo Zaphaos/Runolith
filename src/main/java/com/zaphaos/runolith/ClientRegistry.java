@@ -9,7 +9,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
-@EventBusSubscriber(modid = Runolith.MODID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = Runolith.MOD_ID, value = Dist.CLIENT)
 public class ClientRegistry {
 
     @SubscribeEvent

@@ -15,7 +15,7 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 
 public class ModTools {
-	public static final DeferredRegister.Items TOOLS = DeferredRegister.createItems(Runolith.MODID);
+	public static final DeferredRegister.Items TOOLS = DeferredRegister.createItems(Runolith.MOD_ID);
     public static final Supplier<PickaxeItem> EMERALD_PICKAXE = TOOLS.register("emerald_pickaxe", () ->
     new PickaxeItem(
         CustTier.EMERALD_TIER,

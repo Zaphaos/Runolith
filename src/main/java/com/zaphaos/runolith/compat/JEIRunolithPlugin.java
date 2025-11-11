@@ -27,7 +27,7 @@ public class JEIRunolithPlugin implements IModPlugin {
 
 	@Override
 	public ResourceLocation getPluginUid() {
-		return ResourceLocation.fromNamespaceAndPath(Runolith.MODID, "jei_plugin");
+		return ResourceLocation.fromNamespaceAndPath(Runolith.MOD_ID, "jei_plugin");
 	}
 	
 	@Override

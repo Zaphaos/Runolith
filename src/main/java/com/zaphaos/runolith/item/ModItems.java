@@ -8,7 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import com.zaphaos.runolith.Runolith;
 
 public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Runolith.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Runolith.MOD_ID);
     
     public static final DeferredItem<Item> RUBY = ITEMS.register("ruby", 
     		() -> new Item(new Item.Properties()));
@@ -20,7 +20,11 @@ public class ModItems {
     		() -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> GEM_NODE_DIAMOND = ITEMS.register("gem_node_diamond", 
     		() -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> EMPTY_EMERALD = ITEMS.register("empty_emerald",
+    		() -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> EMPTY_RUBY = ITEMS.register("empty_ruby", 
+    		() -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> EMPTY_DIAMOND = ITEMS.register("empty_diamond",
     		() -> new Item(new Item.Properties()));
     
     public static void register(IEventBus modEventBus) 

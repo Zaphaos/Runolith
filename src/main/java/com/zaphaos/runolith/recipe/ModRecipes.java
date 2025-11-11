@@ -11,9 +11,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModRecipes {
 	public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
-			DeferredRegister.create(Registries.RECIPE_SERIALIZER, Runolith.MODID);
+			DeferredRegister.create(Registries.RECIPE_SERIALIZER, Runolith.MOD_ID);
 	public static final DeferredRegister<RecipeType<?>> TYPES =
-			DeferredRegister.create(Registries.RECIPE_TYPE, Runolith.MODID);
+			DeferredRegister.create(Registries.RECIPE_TYPE, Runolith.MOD_ID);
 	
 	public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<EnrichmentChamberRecipe>> ENRICHMENT_CHAMBER_SERIALIZER =
 			SERIALIZERS.register("enrichment_chamber", EnrichmentChamberRecipe.Serializer::new);

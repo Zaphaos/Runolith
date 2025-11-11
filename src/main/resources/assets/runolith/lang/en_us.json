@@ -5,7 +5,9 @@
   "item.runolith.gem_node_ruby":			"Ruby Gem Node",
   "item.runolith.empty_ruby":				"Empty Ruby",
   "item.runolith.gem_node_diamond":			"Diamond Gem Node",
+  "item.runolith.empty_diamond":			"Empty Diamond",
   "item.runolith.gem_node_emerald":			"Emerald Gem Node",
+  "item.runolith.empty_emerald":			"Empty Emerald",
   "item.runolith.emerald_sword": 			"Emerald Sword",
   "item.runolith.emerald_pickaxe": 			"Emerald Pickaxe",
   "item.runolith.emerald_axe": 				"Emerald Axe",
@@ -18,8 +20,10 @@
   "block.runolith.enrichment_chamber":		"Enrichment Chamber",
   "block.runolith.growth_chamber":			"Growth Chamber",
   "block.runolith.imbuement_chamber": 		"Imbuement Chamber",
+  "block.runolith.dynamic_item_pedestal":	"Item Pedestal",
   "block.runolith.ruby_block":				"Block of Ruby",
   "block.runolith.impure_ruby_block":		"Block of Impure Ruby",
   "block.runolith.ruby_ore":				"Ruby Ore",
-  "block.runolith.deepslate_ruby_ore":		"Deepslate Ruby Ore"
+  "block.runolith.deepslate_ruby_ore":		"Deepslate Ruby Ore",
+  "tooltip.runolith.imbuement_fuel_tier":	"Fuel Tier: %s (%s)"
 }

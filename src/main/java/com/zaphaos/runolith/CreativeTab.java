@@ -16,7 +16,7 @@ import com.zaphaos.runolith.equipment.mod_weapons.ModWeapons;
 
 public class CreativeTab {
 	public static final DeferredRegister<CreativeModeTab> Runolith_TAB =
-			DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Runolith.MODID);
+			DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Runolith.MOD_ID);
 	
 	public static final Supplier<CreativeModeTab> RUNOLITH_GENERAL_Tab = Runolith_TAB.register("runolith_tab", 
 			() -> CreativeModeTab.builder().icon(() -> new ItemStack(ModWeapons.EMERALD_SWORD.get()))
@@ -25,6 +25,10 @@ public class CreativeTab {
 				output.accept(ModBlocks.ENRICHMENT_CHAMBER.get());
 				output.accept(ModBlocks.GROWTH_CHAMBER.get());
 				output.accept(ModBlocks.IMBUEMENT_CHAMBER.get());
+				
+				output.accept(ModBlocks.DYNAMIC_ITEM_PEDESTAL.get());
+				
+				output.accept(ModItems.EMPTY_EMERALD.get());
 				output.accept(ModItems.GEM_NODE_EMERALD.get());
 				output.accept(ModWeapons.EMERALD_SWORD.get());
 				output.accept(ModTools.EMERALD_PICKAXE.get());
@@ -35,6 +39,7 @@ public class CreativeTab {
 				output.accept(ModArmor.EMERALD_CHESTPLATE.get());
 				output.accept(ModArmor.EMERALD_LEGGINGS.get());
 				output.accept(ModArmor.EMERALD_BOOTS.get());
+				
 				output.accept(ModBlocks.RUBY_BLOCK.get());
 				output.accept(ModBlocks.IMPURE_RUBY_BLOCK.get());
 				output.accept(ModBlocks.RUBY_ORE.get());
@@ -43,6 +48,8 @@ public class CreativeTab {
 				output.accept(ModItems.IMPURE_RUBY.get());
 				output.accept(ModItems.EMPTY_RUBY.get());
 				output.accept(ModItems.GEM_NODE_RUBY.get());
+				
+				output.accept(ModItems.EMPTY_DIAMOND.get());
 				output.accept(ModItems.GEM_NODE_DIAMOND.get());
 			}).build());
 	

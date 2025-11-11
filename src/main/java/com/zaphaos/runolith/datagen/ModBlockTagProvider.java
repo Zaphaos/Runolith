@@ -17,7 +17,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 	public ModBlockTagProvider(PackOutput output, CompletableFuture<Provider> lookupProvider,
 			@Nullable ExistingFileHelper existingFileHelper) {
-		super(output, lookupProvider, Runolith.MODID, existingFileHelper);
+		super(output, lookupProvider, Runolith.MOD_ID, existingFileHelper);
 	}
 
 	@Override
@@ -29,7 +29,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 			.add(ModBlocks.DEEPSLATE_RUBY_ORE.get())
 			.add(ModBlocks.ENRICHMENT_CHAMBER.get())
 			.add(ModBlocks.GROWTH_CHAMBER.get())
-			.add(ModBlocks.IMBUEMENT_CHAMBER.get());
+			.add(ModBlocks.IMBUEMENT_CHAMBER.get())
+			.add(ModBlocks.DYNAMIC_ITEM_PEDESTAL.get());
 		
 		tag(BlockTags.NEEDS_IRON_TOOL)
 			.add(ModBlocks.RUBY_BLOCK.get())

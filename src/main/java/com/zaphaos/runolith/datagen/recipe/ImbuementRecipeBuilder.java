@@ -3,9 +3,6 @@ package com.zaphaos.runolith.datagen.recipe;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import javax.annotation.Nullable;
-
-import com.zaphaos.runolith.recipe.EnrichmentChamberRecipe;
 import com.zaphaos.runolith.recipe.ImbuementChamberRecipe;
 
 import net.minecraft.advancements.Advancement;
@@ -24,23 +21,25 @@ import net.minecraft.world.level.ItemLike;
 
 public class ImbuementRecipeBuilder implements RecipeBuilder {
 	private final Ingredient ingredient;
+	private final int tier;
     private final Item result;
     private final int count;
     private final RecipeCategory category;
-    private final String group;
+	private final String group;
     
     private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
 	
-    public ImbuementRecipeBuilder(Ingredient ingredient, ItemLike result, int count, RecipeCategory category, String group) {
+    public ImbuementRecipeBuilder(Ingredient ingredient, int tier, ItemLike result, int count, RecipeCategory category, String group) {
     	this.ingredient = ingredient;
+    	this.tier = tier;
     	this.result = result.asItem();
     	this.count = count;
     	this.category = category;
     	this.group = group;
     }
     
-    public static ImbuementRecipeBuilder imbuing(ItemLike ingredient, RecipeCategory category, ItemLike primary, int count, String group) {
-    	return new ImbuementRecipeBuilder(Ingredient.of(ingredient), primary, count, category, group);
+    public static ImbuementRecipeBuilder imbuing(ItemLike ingredient, int tier, RecipeCategory category, ItemLike primary, int count, String group) {
+    	return new ImbuementRecipeBuilder(Ingredient.of(ingredient), tier, primary, count, category, group);
     }
     
 	@Override
@@ -51,7 +50,7 @@ public class ImbuementRecipeBuilder implements RecipeBuilder {
 
 	@Override
 	public RecipeBuilder group(String groupName) {
-		return new ImbuementRecipeBuilder(this.ingredient, this.result, this.count, this.category, groupName);
+		return new ImbuementRecipeBuilder(this.ingredient, this.tier, this.result, this.count, this.category, groupName);
 	}
 
 	@Override
@@ -75,6 +74,7 @@ public class ImbuementRecipeBuilder implements RecipeBuilder {
 	    // Construct the actual recipe
 	    ImbuementChamberRecipe recipe = new ImbuementChamberRecipe(
 	            this.ingredient,
+	            this.tier,
 	            new ItemStack(this.result, this.count)
 	    );
 
