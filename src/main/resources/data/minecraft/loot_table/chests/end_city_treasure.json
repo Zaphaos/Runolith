@@ -1,0 +1,16 @@
+{
+  "rolls": 1,
+  "entries": [
+    {
+      "type": "item",
+      "name": "runolith:spell_page",
+      "functions": [
+        {
+          "function": "runolith:random_spell",
+          "max_rarity": 4
+        }
+      ],
+      "weight": 20
+    }
+  ]
+}

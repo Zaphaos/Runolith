@@ -17,6 +17,7 @@
   "item.runolith.emerald_chestplate": 		"Emerald Chestplate",
   "item.runolith.emerald_leggings": 		"Emerald Leggings",
   "item.runolith.emerald_boots": 			"Emerald Boots",
+  "item.runolith.spell_slate":				"Spell Slate",
   "block.runolith.enrichment_chamber":		"Enrichment Chamber",
   "block.runolith.growth_chamber":			"Growth Chamber",
   "block.runolith.imbuement_chamber": 		"Imbuement Chamber",
@@ -25,5 +26,18 @@
   "block.runolith.impure_ruby_block":		"Block of Impure Ruby",
   "block.runolith.ruby_ore":				"Ruby Ore",
   "block.runolith.deepslate_ruby_ore":		"Deepslate Ruby Ore",
-  "tooltip.runolith.imbuement_fuel_tier":	"Fuel Tier: %s (%s)"
+  "tooltip.runolith.imbuement_fuel_tier":	"Fuel Tier: %s (%s)",
+  "tooltip.runolith.empty_spell_slate":		"Empty Spell Slate",
+  "tooltip.runolith.glyph_main": 			"Main: %s",
+  "tooltip.runolith.glyph_form": 			"Form: %s",
+  "tooltip.runolith.glyph_secondary": 		"Secondary: %s",
+  "tooltip.runolith.glyph_extra": 			"Extras: %s",
+  "message.runolith.learn_spell": 			"You have learned the spell part: %s",
+  "message.runolith.warning.spell_part_mis":"Some spell parts are missing!",
+  "message.runolith.warning.invalid_spell": "Invalid Spell!",
+  "message.runolith.warning.materials_mis": "Missing materials!",
+  "glyph.runolith.diamond_gem":				"Diamond Gem",
+  "glyph.runolith.amethyst_gem":			"Amethyst Gem",
+  "glyph.runolith.quartz_gem":				"Quartz Gem",
+  "glyph.runolith.self":					"Self Glyph"
 }

@@ -26,6 +26,12 @@ public class ModItems {
     		() -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> EMPTY_DIAMOND = ITEMS.register("empty_diamond",
     		() -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SPELL_SLATE = ITEMS.register("spell_slate",
+            () -> new SpellSlateItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> Spell_Page = ITEMS.register("spell_page",
+            () -> new SpellPageItem(new Item.Properties().stacksTo(1)));
+
+    
     
     public static void register(IEventBus modEventBus) 
     {
