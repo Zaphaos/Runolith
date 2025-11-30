@@ -1,0 +1,14 @@
+{
+  "type": "runolith:glyph_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "feature": "end_city"
+      }
+    }
+  ],
+  "min_rarity": 5,
+  "max_rarity": 5,
+  "chance": 0.15
+}

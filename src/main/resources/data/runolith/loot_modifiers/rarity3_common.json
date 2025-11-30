@@ -1,0 +1,20 @@
+{
+  "type": "runolith:glyph_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "feature": "fortress"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "feature": "bastion"
+      }
+    }
+  ],
+  "min_rarity": 2,
+  "max_rarity": 3,
+  "chance": 0.35
+}

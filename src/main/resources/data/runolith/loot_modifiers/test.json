@@ -1,0 +1,7 @@
+{
+  "type": "runolith:glyph_loot",
+  "conditions": [],
+  "min_rarity": 0,
+  "max_rarity": 5,
+  "chance": 1
+}

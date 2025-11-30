@@ -1,0 +1,26 @@
+{
+  "type": "runolith:glyph_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "feature": "mineshaft"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "feature": "dungeon"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "feature": "ruined_portal"
+      }
+    }
+  ],
+  "min_rarity": 1,
+  "max_rarity": 2,
+  "chance": 0.3
+}

@@ -1,0 +1,14 @@
+{
+  "type": "runolith:glyph_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "feature": "village"
+      }
+    }
+  ],
+  "min_rarity": 1,
+  "max_rarity": 1,
+  "chance": 0.45
+}

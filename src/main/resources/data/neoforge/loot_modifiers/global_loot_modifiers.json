@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "entries": [
+    "runolith:rarity1",
+    "runolith:rarity2",
+    "runolith:rarity2_common",
+    "runolith:rarity3",
+    "runolith:rarity3_common",
+    "runolith:rarity4",
+    "runolith:rarity4_common",
+    "runolith:rarity5"
+  ]
+}
